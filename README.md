@@ -30,7 +30,9 @@ Enter any movie review in the app and get an instant Positive/Negative predictio
 
 - The transformer outperforms the classical baseline by ~1.85%, but the gap is modest — TF-IDF + Logistic Regression remains a strong, fast, and lightweight option for this task.
 - Error analysis showed both models struggle most with **mixed-sentiment reviews** — e.g. reviews that use positive language ("entertaining," "enjoyed") while delivering an overall negative verdict.
-
+## Demo App Features
+- Choose between the Baseline model and DistilBERT for predictions
+- DistilBERT generally shows higher confidence scores, especially on nuanced/mixed-sentiment reviews
 ## How to Run
 
 ```bash
@@ -39,6 +41,7 @@ cd nlp-sentiment-analysis
 pip install -r requirements.txt
 streamlit run app/streamlit_app.py
 ```
+Note: On first use, selecting the DistilBERT option will download the fine-tuned model (~250MB) from the Hugging Face Hub, so an internet connection is required for that model choice. The Baseline model works fully offline.
 
 ## Project Structure
 ## Future Improvements
